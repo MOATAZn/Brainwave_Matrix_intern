@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Master Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-container">
+    <header class="todo-header">
+      <h1>✨ Task Master Pro</h1>
+      <div class="stats-bar">
+        <span class="stats-item">Total: <span id="total-count">0</span></span>
+        <span class="stats-item">Active: <span id="active-count">0</span></span>
+        <span class="stats-item">Completed: <span id="completed-count">0</span></span>
+      </div>
+    </header>
+
+    <div class="controls-container">
+      <div class="filters">
+        <select class="filter-select custom-select">
+          <option value="all">All Tasks</option>
+          <option value="active">Active</option>
+          <option value="completed">Completed</option>
+        </select>
+        <select class="sort-select custom-select">
+          <option value="date">Sort by Date</option>
+          <option value="priority">Sort by Priority</option>
+          <option value="dueDate">Sort by Due Date</option>
+        </select>
+      </div>
+
+      <form class="todo-form">
+        <div class="form-row">
+          <input type="text" name="todo-text" class="todo-input" placeholder="What needs to be done?" required>
+          <select name="category" class="category-select custom-select" required>
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Shopping">Shopping</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <select name="priority" class="priority-select custom-select">
+            <option value="low">Low Priority</option>
+            <option value="medium" selected>Medium Priority</option>
+            <option value="high">High Priority</option>
+          </select>
+          <input type="date" name="due-date" class="due-date-input">
+          <button type="submit" class="add-btn">Add Task</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="todo-lists-container">
+      <div class="list-column">
+        <h2>Tasks</h2>
+        <ul class="todo-list" id="todo-list"></ul>
+      </div>
+    </div>
+
+    <div class="quick-actions">
+      <button id="clear-completed" class="action-btn">Clear Completed</button>
+      <button id="mark-all" class="action-btn">Mark All Complete</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
