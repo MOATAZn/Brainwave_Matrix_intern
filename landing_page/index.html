@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduVerse - Modern Learning Platform</title>
+  <!-- Preload resources -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+  <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-text">EduVerse</span>
+        <div class="logo-dot"></div>
+      </div>
+      <div class="nav-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li class="dropdown">
+          <a href="#courses">Courses <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#web">Web Development</a></li>
+            <li><a href="#mobile">Mobile Development</a></li>
+            <li><a href="#data">Data Science</a></li>
+            <li><a href="#design">UI/UX Design</a></li>
+          </ul>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li class="dropdown">
+          <a href="#resources">Resources <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#tutorials">Tutorials</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#community">Community</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search courses...">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="notification-bell">
+          <i class="fas fa-bell"></i>
+          <span class="notification-count">3</span>
+        </div>
+        <button class="btn btn-login">Login</button>
+        <button class="btn btn-signup">Sign Up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Welcome Back!</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <div class="form-group">
+          <label class="checkbox">
+            <input type="checkbox" id="remember">
+            <span>Remember me</span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <div class="social-login">
+          <p>Or login with</p>
+          <div class="social-buttons">
+            <button type="button" class="btn-social btn-google">
+              <i class="fab fa-google"></i>
+            </button>
+            <button type="button" class="btn-social btn-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            <button type="button" class="btn-social btn-github">
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content" data-aos="fade-right">
+        <h1>Transform Your Future With <span class="highlight">Online Learning</span></h1>
+        <p>Join thousands of students worldwide and unlock your potential with our expert-led courses.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary pulse">Get Started</button>
+          <button class="btn btn-secondary">View Courses</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+            <span class="stat-plus ">+</span>
+            <span class="stat-number" data-target="15000">0</span>
+            <div class="stat-label">Students</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <span class="stat-plus">+</span>
+            <span class="stat-number" data-target="300">0</span>
+            <div class="stat-label">Courses</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <span class="stat-plus">+</span>
+            <span class="stat-number" data-target="75">+ 0</span>
+            <div class="stat-label">Instructors</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3" alt="Learning">
+        <div class="floating-card card-1">
+          <i class="fas fa-graduation-cap"></i>
+          <span>500+ Graduates</span>
+        </div>
+        <div class="floating-card card-2">
+          <i class="fas fa-star"></i>
+          <span>4.9 Rating</span>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Why Choose EduVerse</h2>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Expert Instructors</h3>
+          <p>Learn from industry professionals with years of experience.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Flexible Learning</h3>
+          <p>Study at your own pace with lifetime access to courses.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3>Certificates</h3>
+          <p>Earn recognized certificates upon course completion.</p>
+        </div>
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Community Support</h3>
+          <p>Join our vibrant community of learners and mentors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Courses -->
+  <section class="courses" id="courses">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Popular Courses</h2>
+      <div class="course-filters" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="mobile">Mobile Development</button>
+        <button class="filter-btn" data-filter="data">Data Science</button>
+        <button class="filter-btn" data-filter="design">UI/UX Design</button>
+      </div>
+      <div class="courses-grid">
+ 
+      </div>
+      <div class="courses-pagination">
+        <button class="pagination-btn" data-page="1">1</button>
+        <button class="pagination-btn" data-page="2">2</button>
+        <button class="pagination-btn" data-page="3">3</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">What Our Students Say</h2>
+      <div class="testimonials-slider" data-aos="fade-up">
+        <div class="testimonial-cards ">
+
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content" data-aos="fade-up">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates on new courses and special offers!</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>EduVerse</h3>
+          <p>Transforming lives through quality online education.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <ul class="contact-info">
+            <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+            <li><i class="fas fa-envelope"></i> info@eduverse.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Education St, Learning City</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 EduVerse. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="index.js"></script>
+  <script src="courses.js"></script>
+  <script src="testimonials.js"></script>
+</body>
+</html>
